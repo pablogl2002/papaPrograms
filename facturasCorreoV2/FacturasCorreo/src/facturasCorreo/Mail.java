@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package facturasCorreo;
 
 import java.util.Properties;
@@ -39,8 +43,8 @@ public class Mail {
 		String pwd = "mueble1963";
 		
 		String subject = "Factura " + month;
-		String txt = "Adjunto factura nº " + nFact + " correspondiente al mes de " + month + " de "+ year + "\n" + "\n"
-              + "Un saludo, Enrique García.\n" ;
+		String txt = "Adjunto factura n� " + nFact + " correspondiente al mes de " + month + " de "+ year + "\n" + "\n"
+              + "Un saludo, Enrique Garc�a.\n" ;
 		
 		Mail m = new Mail(from, to, subject, txt, pwd, year);
 	  	m.envioDeMensajes(file);
@@ -48,8 +52,7 @@ public class Mail {
     
     private void envioDeMensajes(String file){
     	try{
-    		System.out.println("Antes propiedades");
-    		
+    		//System.out.println("Antes propiedades");
     		Properties props = new Properties();  
     		props.put("mail.smtp.socketFactory.fallback", "false");  
     		props.put("mail.smtp.quitwait", "false");
@@ -68,20 +71,17 @@ public class Mail {
 			  
     		Session s = Session.getDefaultInstance(props);
     		
-    		System.out.println("Despues propiedades, antes mensaje");
+    		//System.out.println("Despues propiedades, antes mensaje");
     		
     		//adjunto
     		BodyPart texto = new MimeBodyPart();
     		texto.setText(tMsg);
     		BodyPart adjunto = new MimeBodyPart();
-    		System.out.println("buscando archivo");
-            adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/pablo/Desktop/CLIENTES/" + year + "/facturas terminadas/" + file)));
-            //adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/pablo/Desktop/archivo.txt")));
-            //adjunto.setDataHandler(new DataHandler(new FileDataSource("/home/pegi/Escritorio/hola.txt")));
-    		
-            System.out.println("archivo encontrado");
-    		
-            adjunto.setFileName(file);
+    		//adjunto.setDataHandler(new DataHandler(new FileDataSource("D:/CLIENTES/a�o "+ year + "/pdf/" + file)));
+    		//adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/Desktop/CLIENTES/a�o "+ year + "/pdf/" + file)));
+                //adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/pablo/Desktop/archivo.txt")));
+                adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/pablo/Desktop/CLIENTES/" + year + "/facturas terminadas/" + file)));
+    		adjunto.setFileName(file);
     		MimeMultipart m = new MimeMultipart();
     		m.addBodyPart(texto);
     		m.addBodyPart(adjunto);
@@ -95,20 +95,18 @@ public class Mail {
     		//mensaje.setText(mensajeDeTexto);
     		mensaje.setContent(m);
 		  
-    		System.out.println("Despues mensaje, antes envio");
+    		//System.out.println("Despues mensaje, antes envio");
 		  
     		Transport t = s.getTransport("smtp");
     		t.connect(srcMail, psw);
     		t.sendMessage(mensaje, mensaje.getAllRecipients());
     		t.close();
-    		System.out.println("exito");
-            IntFactC.sentMessage();
-		} catch (MessagingException ex) {
+    		//System.out.println("exito")
+                IntFactC.sentMessage();
+	} catch (MessagingException ex) {
             IntFactC.messageErrorAlert(ex);
-	    } catch (NullPointerException ex) {
-	    	System.out.print(ex);
-            IntFactC.fileNotFoundAlert(ex);
-            
-	    }
+        } catch (NullPointerException e) {
+            IntFactC.fileNotFoundAlert();
+        }
     }
 }

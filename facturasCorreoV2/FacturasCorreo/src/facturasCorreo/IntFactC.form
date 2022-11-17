@@ -3,7 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -24,12 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="343" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" pref="400" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" min="-2" pref="251" max="-2" attributes="0"/>
+          <Component id="jPanel1" alignment="0" min="-2" pref="251" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -51,7 +50,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="addClient_button" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -65,26 +64,26 @@
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel4" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="send_button" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="textField_nFact" max="32767" attributes="0"/>
+                                      <Component id="send_button" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="textField_nFact" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel2" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="comboBox_month" min="-2" pref="141" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="32767" attributes="0"/>
                               </Group>
@@ -124,7 +123,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="comboBox_year" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="comboBox_month" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="comboBox_month" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -142,21 +141,6 @@
       <SubComponents>
         <Component class="javax.swing.JComboBox" name="comboBox_cliente">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="11">
-                <StringItem index="0" value="Black Ice"/>
-                <StringItem index="1" value="CubiMobax"/>
-                <StringItem index="2" value="Cucine"/>
-                <StringItem index="3" value="Decor"/>
-                <StringItem index="4" value="Dismuyec"/>
-                <StringItem index="5" value="Enme Contract"/>
-                <StringItem index="6" value="Huca"/>
-                <StringItem index="7" value="J.F Bonillo"/>
-                <StringItem index="8" value="Jaime Monteagudo"/>
-                <StringItem index="9" value="Luisina"/>
-                <StringItem index="10" value="Vicente Cardona"/>
-              </StringArray>
-            </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[136, 28]"/>
             </Property>

@@ -83,6 +83,7 @@ public class IntFactC extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         textField_nFact = new javax.swing.JTextField();
+        addClient_button = new javax.swing.JButton();
         send_button = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -138,6 +139,16 @@ public class IntFactC extends javax.swing.JFrame {
             }
         });
 
+        addClient_button.setBackground(new java.awt.Color(53, 159, 212));
+        addClient_button.setForeground(new java.awt.Color(255, 255, 255));
+        addClient_button.setText("AÑADIR CLIENTE");
+        addClient_button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addClient_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addClient_buttonActionPerformed(evt);
+            }
+        });
+
         send_button.setBackground(new java.awt.Color(53, 159, 212));
         send_button.setForeground(new java.awt.Color(255, 255, 255));
         send_button.setText("ENVIAR");
@@ -180,6 +191,25 @@ public class IntFactC extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(addClient_button)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(77, 77, 77))
+                            .addComponent(comboBox_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(62, 62, 62))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(send_button, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textField_nFact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,26 +222,7 @@ public class IntFactC extends javax.swing.JFrame {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(50, 50, 50))
                             .addComponent(comboBox_year, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(64, 64, 64))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(comboBox_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 24, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(89, 89, 89)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(62, 62, 62))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                                        .addComponent(send_button, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(textField_nFact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18))))))
+                        .addGap(64, 64, 64))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,7 +234,7 @@ public class IntFactC extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBox_cliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(comboBox_cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                     .addComponent(textField_nFact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -233,9 +244,13 @@ public class IntFactC extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(comboBox_year, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboBox_month, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(send_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(addClient_button))
+                    .addComponent(send_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -246,26 +261,11 @@ public class IntFactC extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void comboBox_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_clienteActionPerformed
-        // TODO add your handling code here:
-        cliente = comboBox_cliente.getItemAt(comboBox_cliente.getSelectedIndex());
-    }//GEN-LAST:event_comboBox_clienteActionPerformed
-
-    private void comboBox_monthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_monthActionPerformed
-        // TODO add your handling code here:
-        month = comboBox_month.getItemAt(comboBox_month.getSelectedIndex());
-    }//GEN-LAST:event_comboBox_monthActionPerformed
-
-    private void comboBox_yearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_yearActionPerformed
-        // TODO add your handling code here:
-        year = Integer.parseInt(comboBox_year.getItemAt(comboBox_year.getSelectedIndex()));
-    }//GEN-LAST:event_comboBox_yearActionPerformed
 
     private void send_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_send_buttonActionPerformed
         // TODO add your handling code here:
@@ -273,10 +273,29 @@ public class IntFactC extends javax.swing.JFrame {
         interfazfacturascorreo.Mail.envioDeCorreos(cMail, month, nFact, (nFact + month), year);
     }//GEN-LAST:event_send_buttonActionPerformed
 
+    private void addClient_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClient_buttonActionPerformed
+
+    }//GEN-LAST:event_addClient_buttonActionPerformed
+
     private void textField_nFactFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textField_nFactFocusLost
         // TODO add your handling code here:
         nFact = Integer.parseInt(textField_nFact.getText());
     }//GEN-LAST:event_textField_nFactFocusLost
+
+    private void comboBox_yearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_yearActionPerformed
+        // TODO add your handling code here:
+        year = Integer.parseInt(comboBox_year.getItemAt(comboBox_year.getSelectedIndex()));
+    }//GEN-LAST:event_comboBox_yearActionPerformed
+
+    private void comboBox_monthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_monthActionPerformed
+        // TODO add your handling code here:
+        month = comboBox_month.getItemAt(comboBox_month.getSelectedIndex());
+    }//GEN-LAST:event_comboBox_monthActionPerformed
+
+    private void comboBox_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBox_clienteActionPerformed
+        // TODO add your handling code here:
+        cliente = comboBox_cliente.getItemAt(comboBox_cliente.getSelectedIndex());
+    }//GEN-LAST:event_comboBox_clienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,6 +333,7 @@ public class IntFactC extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addClient_button;
     private javax.swing.JComboBox<String> comboBox_cliente;
     private javax.swing.JComboBox<String> comboBox_month;
     private javax.swing.JComboBox<String> comboBox_year;
